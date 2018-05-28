@@ -8,6 +8,42 @@
   </head>
   <body>
     <h1>Weekend Challenge #2</h1>
-    <h2>Server Side Calculator</h2>
-  </body>
+    <h2>Server Side Calculator, Stretch Goal</h2>
+    <section id="inputSection">
+      <input id="inputs" placeholder="">
+      <input type="button" id="clearButton" value="C"></button>
+    </section>
+    <section id="calculatorButtons">
+      <table id="calculatorTable">
+        <tr>
+          <td id="7Button"><input type="button" value="7"></td>
+          <td id="8Button"><input type="button" value="8"></td>
+          <td id="9Button"><input type="button" value="9"></td>
+          <td id="addButton"><input type="button" value="+"></td>
+        </tr>
+        <tr>
+          <td id="4Button"><input type="button" value="4"></td>
+          <td id="5Button"><input type="button" value="5"></td>
+          <td id="6Button"><input type="button" value="6"></td>
+          <td id="subtractButton"><input type="button" value="-"></td>
+        </tr>
+        <tr>
+          <td id="1Button"><input type="button" value="1"></td>
+          <td id="2Button"><input type="button" value="2"></td>
+          <td id="3Button"><input type="button" value="3"></td>
+          <td id="multiplyButton"><input type="button" value="*"></td>
+        </tr>
+        <tr>
+          <td id="0Button"><input type="button" value="0"></td>
+          <td id="dotButton"><input type="button" value="."></td>
+          <td id="equalButton"><input type="button" value="="></td>
+          <td id="divideButton"><input type="button" value="/"></td>
+        </tr>
+      </table>
+    </section>
+    <section id="outputs">
+      <h2 id="answer"></h2>
+      <ul id="history"></ul>
+    </section>
+  </body>  
 </html>
