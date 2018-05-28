@@ -18,15 +18,31 @@ function readyNow(){
   $( '#input' ).prop( 'readonly', true );
   // $( '#1Button' ).on( 'click', Press1 );
   $( '.input' ).on( 'click', appendInput );
+  $( '#clearButton' ).on( 'click', clearInputs );
   $( '.op' ).on( 'click', stopOps );
-  $( '#eq' ).on( 'click', sendData );
+  $( '#eq' ).on( 'click', checkData );
 } //end readyNow
 
 function appendInput() {
   let number = $(this).data( 'number' );
-  $( '#input' ).val( function() {
-      return this.value + number;
-  });
+  if ( $( '.op' ).prop( 'disabled' ) ){
+    $( '#input').val( $( '#input' ).val() + ' ' + number );
+  }
+  else {
+    $( '#input' ).val( $( '#input' ).val() + number );
+  }
+}
+
+function checkData() {
+  inputArr = $( '#input' ).val().split( ' ' );
+  console.log( inputArr );
+  
+  if( inputArr.length < 3 ) {
+    alert( 'Error: invalid input' );
+  }
+  else {
+    sendData();
+  }
 }
 
 function clearInputs() {
@@ -53,7 +69,6 @@ let num2;
 let op;
 function sendData() {
   $( 'history' ).append( `<li>${ $( '#input' ).val() }</li>`);
-  inputArr = $( '#input' ).val().split( ' ' );
   num1 = inputArr[0];
   num2 = inputArr[2];
   op = inputArr[1];
@@ -69,8 +84,8 @@ function sendData() {
 }
 
 function stopOps() {
-  let opString = ' ' + $( this ).val() + ' ';
-  $( '#input' ).val( $( '#input' ).val() + opString );
+  let opString = $( this ).val();
+  $( '#input' ).val( $( '#input' ).val() + ' ' + opString );
   $( '.op' ).prop( 'disabled', true );
 }
 
