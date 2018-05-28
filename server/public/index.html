@@ -10,40 +10,40 @@
     <h1>Weekend Challenge #2</h1>
     <h2>Server Side Calculator, Stretch Goal</h2>
     <section id="inputSection">
-      <input id="inputs" placeholder="">
-      <input type="button" id="clearButton" value="C"></button>
+      <input id="input" type="text">
+      <input type="button" id="clearButton" value="C">
     </section>
     <section id="calculatorButtons">
       <table id="calculatorTable">
         <tr>
-          <td id="7Button"><input type="button" value="7"></td>
-          <td id="8Button"><input type="button" value="8"></td>
-          <td id="9Button"><input type="button" value="9"></td>
-          <td id="addButton"><input type="button" value="+"></td>
+          <td><input id="7" class="input" type="button" value="7" data-number="7"></td>
+          <td><input id="8" class="input" type="button" value="8" data-number="8"></td>
+          <td><input id="9" class="input" type="button" value="9" data-number="9"></td>
+          <td><input id="add" class="input" type="button" value="+" data-number="+"></td>
         </tr>
         <tr>
-          <td id="4Button"><input type="button" value="4"></td>
-          <td id="5Button"><input type="button" value="5"></td>
-          <td id="6Button"><input type="button" value="6"></td>
-          <td id="subtractButton"><input type="button" value="-"></td>
+          <td><input id="4" class="input" type="button" value="4" data-number="4"></td>
+          <td><input id="5" class="input" type="button" value="5" data-number="5"></td>
+          <td><input id="6" class="input" type="button" value="6" data-number="6"></td>
+          <td><input id="subtract" class="input" type="button" value="-" data-number="-"></td>
         </tr>
         <tr>
-          <td id="1Button"><input type="button" value="1"></td>
-          <td id="2Button"><input type="button" value="2"></td>
-          <td id="3Button"><input type="button" value="3"></td>
-          <td id="multiplyButton"><input type="button" value="*"></td>
+          <td><input id="1" class="input" type="button" value="1" data-number="1"></td>
+          <td><input id="2" class="input" type="button" value="2" data-number="2"></td>
+          <td><input id="3" class="input" type="button" value="3" data-number="3"></td>
+          <td><input id="multiply" class="input" type="button" value="*" data-number="*"></td>
         </tr>
         <tr>
-          <td id="0Button"><input type="button" value="0"></td>
-          <td id="dotButton"><input type="button" value="."></td>
-          <td id="equalButton"><input type="button" value="="></td>
-          <td id="divideButton"><input type="button" value="/"></td>
+          <td><input id="0" class="input" type="button" value="0" data-number="0"></td>
+          <td><input id="dot" class="input" type="button" value="." data-number="."></td>
+          <td><input id="=" type="button" value="="></td>
+          <td><input id="divide" class="input" type="button" value="/" data-number="/"></td>
         </tr>
       </table>
     </section>
     <section id="outputs">
       <h2 id="answer"></h2>
-      <ul id="history"></ul>
+      <ul id="history">
     </section>
   </body>  
 </html>
